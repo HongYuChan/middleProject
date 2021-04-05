@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<<<<<<< HEAD
+	<h1>메인</h1>
+=======
+	<h1>테스트</h1>
+>>>>>>> hyc
+</body>
+</html>
