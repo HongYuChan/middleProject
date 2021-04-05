@@ -1,9 +1,0 @@
-diff a/middle/WebContent/test.html b/middle/WebContent/test.html	(rejected hunks)
-@@ -5,6 +5,7 @@
- <title>Insert title here</title>
- </head>
- <body>
-+<<<<<<< HEAD
- 	<h1>����</h1>
- =======
- 	<h1>�׽�Ʈ</h1>
