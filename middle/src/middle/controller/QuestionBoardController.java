@@ -19,7 +19,7 @@ public class QuestionBoardController extends HttpServlet {
     		System.out.println("requestURI: "+requestURI);
     	String contextPath = request.getContextPath();
     		System.out.println("contextPath: "+contextPath);
-    	String command = requestURI.substring(contextPath.length()+7);
+    	String command = requestURI.substring(contextPath.length()+15);
     		System.out.println("command: "+command);
     		
     		
