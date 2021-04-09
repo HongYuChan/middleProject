@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<mapper namespace="middle.mapper.NoticeBoardMapper">
+	<cache />
+	
+	<insert id="noticeInsertBoard" parameterType="NoticeBoard">
+		insert into notice_board(
+			notice_id, notice_title, notice_contents, notice_writer, notice_date, notice_hitcount
+		)
+		values(
+			notice_seq.NEXTVAL, #{notice_title}, #{notice_contents}, #{notice_writer}, SYSDATE, 0 
+		)
+	</insert>
+	
+	<select id="noticeListBoard" resultType="NoticeBoard">
+		select * from notice_board
+		<!-- order by notice_id desc; -->
+	</select>
+	
+	<select id="noticeDetailBoard" parameterType="int" resultType="NoticeBoard">
+		select * from notice_board where notice_id = #{notice_id}
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
