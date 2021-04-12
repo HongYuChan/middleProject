@@ -17,14 +17,25 @@
 	</insert>
 	
 	<select id="noticeListBoard" resultType="NoticeBoard">
-		select * from notice_board
-		<!-- order by notice_id desc; -->
+		select * from notice_board order by notice_id desc
 	</select>
 	
 	<select id="noticeDetailBoard" parameterType="int" resultType="NoticeBoard">
 		select * from notice_board where notice_id = #{notice_id}
 	</select>
 	
+	<update id="noticeUpdateBoard" parameterType="noticeBoard">
+		update notice_board set notice_title = #{notice_title}, notice_contents = #{notice_contents}
+			where notice_id = #{notice_id}
+	</update>
+	
+	<delete id="noticeDeleteBoard" parameterType="int">
+		delete from notice_board where notice_id = #{notice_id}
+	</delete>
+	
+	<select id="noticeCountBoard" resultType="int"><!-- 총 글갯수 페이징-->
+		select count(*) from notice_board
+	</select>
 </mapper>
 
 

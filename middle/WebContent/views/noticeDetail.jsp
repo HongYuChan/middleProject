@@ -19,8 +19,8 @@
 	<br>
 	
 	<br><br>
-	<a href="updateForm.do?seq=${NotionBoard.notice_id }">글수정</a>
-	<a href="delete.jsp?seq=${NotionBoard.notice_id }">글삭제</a>
+	<a href="noticeUpdateFormAction.do?notice_id=${noticeBoard.notice_id }">글수정</a>
+	<a href="noticeDeleteAction.do?notice_id=${noticeBoard.notice_id }">글삭제</a>
 	
 </body>
 </html>

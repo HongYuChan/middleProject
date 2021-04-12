@@ -11,10 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import middle.action.Action;
 import middle.action.ActionForward;
+import middle.action.NoticeDeleteAction;
 import middle.action.NoticeDetailAction;
 import middle.action.NoticeInsertAction;
 import middle.action.NoticeInsertFormAction;
 import middle.action.NoticeListAction;
+import middle.action.NoticeUpdateAction;
+import middle.action.NoticeUpdateFormAction;
 
 @WebServlet("/noticeBoard/*")
 public class NoticeBoardController extends HttpServlet {
@@ -34,7 +37,7 @@ public class NoticeBoardController extends HttpServlet {
     	Action action = null;
     	ActionForward forward = null;
     	
-    	if(command.equals("noticeInsertForm.do")) {
+    	if(command.equals("noticeInsertFormAction.do")) {
     		action = new NoticeInsertFormAction();
     		try {
     			forward = action.execute(request, response);
@@ -59,6 +62,29 @@ public class NoticeBoardController extends HttpServlet {
     	}else if(command.equals("noticeDetailBoard.do")) {
     		action = new NoticeDetailAction();
     		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}else if(command.equals("noticeUpdateAction.do")) {
+			action = new NoticeUpdateAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+    	else if(command.equals("noticeUpdateFormAction.do")) {
+			action = new NoticeUpdateFormAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}
+    	else if(command.equals("noticeDeleteAction.do")) {
+			action = new NoticeDeleteAction();
+			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();

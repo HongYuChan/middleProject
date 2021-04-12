@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="noticeInsertForm.do">글쓰기</a>
+	<a href="noticeInsertFormAction.do">글쓰기</a>
 	<table border="1">
 		<tr>
 			<td>글번호</td>
@@ -19,7 +19,7 @@
 			<td>작성일자</td>
 			<td>조회수</td>
 		</tr>
-		<c:forEach var="noticeBoard" items="${NoticeList}">
+		<c:forEach var="noticeBoard" items="${noticeListModel.list}">
 		<tr>	
 			<td>${noticeBoard.notice_id }</td>
 			<td><a href="noticeDetailBoard.do?notice_id=${noticeBoard.notice_id }">${noticeBoard.notice_title }</a></td>
@@ -33,6 +33,9 @@
 		</c:forEach>
 	</table>
 	<br><br>
+	
+	<!-- 페이징 처리 -->
+	
 	
 	<form action="NoticeListAction.do" method="post">
 		<input type="checkbox" name="area" value="notice_title">제목
