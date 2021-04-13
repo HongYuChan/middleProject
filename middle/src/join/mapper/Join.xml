@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<mapper namespace="join.mapper.JoinMapper">
+	<cache />
+	
+	<insert id="insertMemberInfo" parameterType="Member">
+		insert into member values(
+		member_user_id.nextval,#{id},#{password},#{nickname},#{email},#{phone_number},#{address}
+		)
+	</insert>
+	
+		
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
