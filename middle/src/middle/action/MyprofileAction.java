@@ -12,12 +12,14 @@ public class MyprofileAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
 		MypageService service = MypageService.getInstance();
-		int user_id = 1;//Integer.parseInt(request.getParameter("user_id"));
+		int user_id = 3;//Integer.parseInt(request.getParameter("user_id"));
 		System.out.println("액션");
 		Member member = service.myprofileService(user_id);
-		System.out.println("액션");
-		request.setAttribute("member", member);
 		
+		System.out.println("액션");
+		System.out.println(user_id);
+		
+		request.setAttribute("member", member);
 		forward.setRedirect(false);
 		forward.setPath("/views/my_profile.jsp");
 		return forward;

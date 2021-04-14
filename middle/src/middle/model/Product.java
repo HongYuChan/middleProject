@@ -1,6 +1,8 @@
 package middle.model;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable{
 	private int product_id;
 	private int user_id;
 	private int category_id;

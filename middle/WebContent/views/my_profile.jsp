@@ -21,7 +21,7 @@
 	<!-- 사이드바 -->	
 	<ul>
 		<li><a href="">내 프로필</a></li>
-		<li><a href="">거래내역</a></li>
+		<li><a href="tradehistory.do?user_id=${member.user_id}">거래내역</a></li>
 		<li><a href="">찜 목록</a></li>
 		<li id="upload_sidebar"><a href="">업로드</a></li>
 		<!-- 여기에 선긋기 -->
@@ -35,9 +35,9 @@
 	<!-- 회색 선 긋기 -->
 	<img alt="" src=""id="proflie_photo">
 	<ul>
-		<a href=""><input type="submit" value="프로필 수정"></a>
-		<li>${member.nickname}별명</li>
-		<li>${member.email}이메일</li>
+		<a href="modifyform.do?user_id=${member.user_id}"><input type="submit" value="프로필 수정"></a>
+		<li>${member.nickname} = 별명</li>
+		<li>${member.email} = 이메일</li>
 	</ul>
 	
 	<h2>마지막 거래내역</h2>
@@ -45,7 +45,7 @@
 		<ul>
 			<img alt="" src="" id="recent_trade">
 			<li>${product.product_name}제품 이름</li>
-			<li>${member.ni ckname}판매자</li>
+			<li>${member.nickname}판매자</li>
 		</ul>
 		
 	<h2>최근 업로드 영상</h2>

@@ -1,6 +1,8 @@
 package middle.model;
 
-public class Member {
+import java.io.Serializable;
+
+public class Member implements Serializable{
 	private int user_id;
 	private String ID;
 	private String password;

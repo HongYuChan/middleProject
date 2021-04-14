@@ -10,7 +10,9 @@
 	</settings>
 
 	<typeAliases>
-		<typeAlias type="middle.model.NoticeBoard" alias="NoticeBoard"/>
+		<typeAlias type="middle.model.Member" alias="Member"/>
+		<typeAlias type="middle.model.Product" alias="Product"/>
+		<typeAlias type="middle.model.Deal" alias="Deal"/>
 	</typeAliases>
 	
 	<environments default="development">
@@ -23,7 +25,7 @@
 	</environments>
 	
 	<mappers>
-		<mapper resource="middle/mapper/NoticeBoard.xml"/>
+		<mapper resource="middle/mapper/Mypage.xml"/>
 	</mappers>
 	
 	

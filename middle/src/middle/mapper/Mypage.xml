@@ -4,64 +4,34 @@
 
 
 
-<mapper namespace="kosta.mapper.BoardMapper">
+<mapper namespace="middle.mapper.Mypagemapper">
 	<cache />
 	
- 	<select id="Myprofile" parameterType="int" resultType="Memeber">
- 		select * from member m inner join product p on m.user_id = p.user_id
- 		where m.user_id = #{user_id}
+ 	<select id="myprofile" parameterType="int" resultType="Member">
+ 		<!-- select * from member m inner join product p on m.user_id = p.user_id
+ 		where m.user_id = #{user_id} -->
+ 		select * from member where user_id = #{user_id}
  	</select>
  	
- 	<update id="Modifyprofile" parameterType="int">
+ 	<select id="myproduct" parameterType="int" resultType="Product">
+ 		select * from product where user_id = #{user_id}
+ 	</select>
+ 	
+ 	<update id="modifyprofile" parameterType="int">
  		update member set nickname=#{nickname}, password=#{password}, email=#{email} where user_id = #{user_id}
  	</update>
  	
- 	<delete id="Deletemember" parameterType="int">
+ 	<delete id="deletemember" parameterType="int">
  		delete from member where user_id = #{user_id}
  	</delete>
- 	<!-- 
- 	<select id="listBoard"  parameterType="Search" resultType="Board">
-		select * from board 
-		<if test="area != null">
-			<where>
-			 where(title LIKE %aa% OR writer LIKE %aa%)  (<=이거랑 똑같아야함)
-			 <foreach collection="area" item="item" separator="OR" open="(" close=")">
-			 	 ${item} LIKE #{searchKey}
-			 </foreach>
-			</where>
-		</if>
-		order by seq desc
-	</select> 
 	
-	<select id="detailBoard" parameterType="int" resultType="Board">
-	select * from board where seq = #{seq}
+	<select id="sellList" parameterType="int" resultType="Product">
+		select * from product where user_id = #{user_id}
 	</select>
 	
-	<update id="updateBoard" parameterType="Board">
-	update board table set title = #{title}, writer = #{writer}, contents = #{contents} where seq = #{seq}
-	</update>
- 
- 	<delete id="deleteBoard" parameterType="Board">
- 	alter table board drop column seq = #{seq}
- 	</delete>
- 	
- 	<insert id="insertReply" parameterType="Reply">
- 	insert into reply
-		values(
-			reply_seq.nextval, #{r_title}, #{r_writer}, #{r_contents}, SYSDATE, #{seq}
-		)
- 	</insert>
- 	
- 	<select id="listReply" parameterType="int" resultType="Reply">
- 	select * from reply where seq = #{seq}
- 	</select> -->
-	 <!-- <resultMap type="Blog" id="blogMap">
-		<result property="id" column="b_id"/>
-		<result property="name" column="b_name"/>
-		<result property="title" column="b_title"/>
-	</resultMap>
-	 -->
-	
+	<select id="buyList" parameterType="int" resultType="Product">
+		select * from product where buyer_id = #{user_id}
+	</select>
 </mapper>
 
 
