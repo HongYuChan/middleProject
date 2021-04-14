@@ -17,7 +17,6 @@
 			<td>글제목</td>
 			<td>작성자</td>
 			<td>작성일자</td>
-			<td>조회수</td>
 		</tr>
 		<c:forEach var="noticeBoard" items="${noticeListModel.list}">
 		<tr>	
@@ -28,16 +27,30 @@
 				<fmt:parseDate var="dt" value="${noticeBoard.notice_date }" pattern="yyyy-MM-dd HH:mm:ss"/>
 				<fmt:formatDate value="${dt }" pattern="yyyy/MM/dd"/>
 			</td>
-			<td>${noticeBoard.notice_hitcount }</td>
 		</tr>
 		</c:forEach>
 	</table>
 	<br><br>
 	
 	<!-- 페이징 처리 -->
+	<!-- 이전 영역 -->
+	<c:if test="${noticeListModel.startPage > 5 }">
+		<a href="noticeListAction.do?pageNum=${noticeListModel.startPage-1 }">[이전]</a>
+	</c:if>
 	
+	<!-- 페이지 목록 -->
+	<c:forEach var="pageNo" begin="${noticeListModel.startPage }" end="${noticeListModel.endPage}">
+		<c:if test="${noticeListModel.requestPage==pageNo }"><b></c:if>
+		<a href="noticeListAction.do?pageNum=${pageNo }">[${pageNo }]</a>
+		<c:if test="${noticeListModel.requestPage==pageNo }"></b></c:if>
+	</c:forEach>
 	
-	<form action="NoticeListAction.do" method="post">
+	<!-- 이후 영역 -->
+	<c:if test="${noticeListModel.endPage <noticeListModel.totalPageCount }">
+		<a href="noticeListAction.do?pageNum=${noticeListModel.endPage+1 }">[이후]</a>
+	</c:if>
+	
+	<form action="noticeListAction.do" method="post">
 		<input type="checkbox" name="area" value="notice_title">제목
 		<input type="checkbox" name="area" value="notice_writer">작성자
 		<input type="text" name="searchKey" size="10">

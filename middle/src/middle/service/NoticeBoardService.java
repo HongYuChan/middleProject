@@ -3,11 +3,13 @@ package middle.service;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.swing.ListModel;
 
 import middle.model.NoticeBoard;
 import middle.model.NoticeBoardDao;
 import middle.model.NoticeListModel;
+import middle.model.NoticeSearch;
 
 public class NoticeBoardService {
 	private static NoticeBoardService service = new NoticeBoardService();
@@ -32,10 +34,27 @@ public class NoticeBoardService {
 	}
 	
 	public NoticeListModel noticeListBoardService(HttpServletRequest request)throws Exception{//페이징: List<NoticeBoard>-> ListModel
+		request.setCharacterEncoding("UTF-8");
+		NoticeSearch noticeSearch = new NoticeSearch();
+		HttpSession session = request.getSession();
+		
+		// 검색할 경우
+				if(request.getParameterValues("area") != null ) {
+					session.removeAttribute("search");
+					noticeSearch.setArea(request.getParameterValues("area"));
+					noticeSearch.setSearchKey("%" + request.getParameter("searchKey") + "%");
+					session.setAttribute("search", noticeSearch);
+				}else if(session.getAttribute("search") != null) {	// 검색 후 페이지를 클릭 할 경우
+					if(request.getParameter("pageNum") == null) {
+						session.removeAttribute("search");
+					}
+					noticeSearch = (NoticeSearch)session.getAttribute("search");
+					System.out.println(noticeSearch);
+				}
 		
 		/////페이징////
 		//총 글갯수 
-		int totalCount = dao.noticeCountBoard();
+		int totalCount = dao.noticeCountBoard(noticeSearch);
 		//총 페이지 수
 		int totalPageCount = totalCount/PAGE_SIZE;
 		if(totalCount%PAGE_SIZE>0) {
@@ -50,6 +69,7 @@ public class NoticeBoardService {
 		
 		//공식// startPage = 현재페이지 - (현재페이지-1) % 5 
 		int startPage = requestPage - (requestPage - 1) % 5;
+		
 		//endPage
 		int endPage = startPage + 4;
 		if(endPage > totalPageCount) {
@@ -61,7 +81,7 @@ public class NoticeBoardService {
 		
 		
 		
-		List<NoticeBoard> noticeList = dao.noticeListBoard(startRow); //페이징 매개변수 startRow
+		List<NoticeBoard> noticeList = dao.noticeListBoard(noticeSearch, startRow); //페이징 매개변수 startRow
 		NoticeListModel noticeListMoel = 
 				new NoticeListModel(noticeList, requestPage, totalPageCount, startPage, endPage);
 				//페이징 처리  return NoticeList -> noticeListMoel

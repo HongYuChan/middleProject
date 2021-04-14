@@ -11,6 +11,7 @@
 
 	<typeAliases>
 		<typeAlias type="middle.model.NoticeBoard" alias="NoticeBoard"/>
+		<typeAlias type="middle.model.NoticeSearch" alias="NoticeSearch"/>
 	</typeAliases>
 	
 	<environments default="development">

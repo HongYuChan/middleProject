@@ -53,11 +53,11 @@ public class NoticeBoardDao {
 		return re;
 	}
 	
-	public List<NoticeBoard> noticeListBoard(int startRow){//페이징: 매개변수 startRow
+	public List<NoticeBoard> noticeListBoard(NoticeSearch noticeSearch, int startRow){//페이징: 매개변수 startRow
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		List<NoticeBoard> NoticeList = null;
 		try {
-			NoticeList = sqlSession.getMapper(NoticeBoardMapper.class).noticeListBoard(new RowBounds(startRow, 5));
+			NoticeList = sqlSession.getMapper(NoticeBoardMapper.class).noticeListBoard(noticeSearch, new RowBounds(startRow, 5));
 			//페이징: new RowBounds 객체로 가져올 행 입력 startRow부터 5개
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -128,11 +128,11 @@ public class NoticeBoardDao {
 		return re;
 	}
 	
-	public int noticeCountBoard() { // 총 글갯수
+	public int noticeCountBoard(NoticeSearch noticeSearch) { // 총 글 갯수	// 검색한 글 갯수
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		int re = 0;
 		try {
-			re = sqlSession.getMapper(NoticeBoardMapper.class).noticeCountBoard();
+			re = sqlSession.getMapper(NoticeBoardMapper.class).noticeCountBoard(noticeSearch);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

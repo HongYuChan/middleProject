@@ -9,13 +9,13 @@ public class NoticeBoard implements Serializable{
 	private String notice_contents;
 	private String notice_writer;
 	private String notice_date;
-	private int notice_hitcount;
 	
 	public NoticeBoard() {
 		super();
 	}
+	
 	public NoticeBoard(int notice_id, int manager_id, String notice_title, String notice_contents, String notice_writer,
-			String notice_date, int notice_hitcount) {
+			String notice_date) {
 		super();
 		this.notice_id = notice_id;
 		this.manager_id = manager_id;
@@ -23,8 +23,8 @@ public class NoticeBoard implements Serializable{
 		this.notice_contents = notice_contents;
 		this.notice_writer = notice_writer;
 		this.notice_date = notice_date;
-		this.notice_hitcount = notice_hitcount;
 	}
+	
 	public int getNotice_id() {
 		return notice_id;
 	}
@@ -61,11 +61,5 @@ public class NoticeBoard implements Serializable{
 	public void setNotice_date(String notice_date) {
 		this.notice_date = notice_date;
 	}
-	public int getNotice_hitcount() {
-		return notice_hitcount;
-	}
-	public void setNotice_hitcount(int notice_hitcount) {
-		this.notice_hitcount = notice_hitcount;
-	}
-	
+
 }
