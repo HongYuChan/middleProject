@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR" session="true"%>
-<%
-	String user = (String)session.getAttribute("user");
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +16,8 @@
 <link rel="stylesheet" href="../mainPageCss/animate.css">
 <link rel="stylesheet" href="../mainPageCss/slicknav.css">
 <link rel="stylesheet" href="../mainPageCss/mainPage.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome-ie7.min.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
 <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -67,7 +66,7 @@
 						</div>
 						<div class="col-xl-3 col-lg-3 d-done d-lg-block">
 							<div class="log_chat_area d-flex align-items-center">
-								<a href="loginForm.do" class="login popup-with-form">
+								<a href="javascript:popupLogin()" class="login popup-with-form">
 									<i class="flaticon-user"></i>
 									<span>log in</span>
 								</a>
@@ -108,22 +107,42 @@
 	<div class="slider_area">
 		<div class="single_slider d-flex align-items-center justify-content-center slider_bg_1 overlay2">
 			<div class="container">
-				<div class="row align-items-center justify-content-center">
-					<div class="col-xl-9">
-						<div class="slider_text text-center">
-							<P>user : <%= user %></P>
-							<p>Test Search Video</p>
-							<h3>Main Search Page</h3>
-							<div class="find_dowmain">
-								<form action="#" class="find_dowmain_form">
-									<input type="text" placeholder="Find Video">
-									<button type="submit">Search</button>
-								</form>
-							</div>
+			<div class="row align-items-center justify-content-center">
+				<div class="col-md-6 pr-md-5">
+				<!-- insertSignUpAction.do -->
+				<div class="slider_text text-center">
+				
+					<form action="insertSignUpAction.do" id="signForm" method="post">
+						<div class="form-group">
+							<input type="text" placeholder="Name" class="form-control" name="name">
 						</div>
-					</div>
+						<div class="form-group">
+							<input type="text" placeholder="ID" class="form-control" name="id">
+						</div>
+						<div class="form-group">
+							<input type="password" id="pw" placeholder="Password" class="form-control" name="password" onblur="checkPass()">
+						</div>
+						<div class="form-group">
+							<input type="text" placeholder="NickName" class="form-control" name="nickname">
+						</div>
+						<div class="form-group">
+							<input type="text" placeholder="Email" class="form-control" name="email">
+						</div>
+						<div class="form-group">
+							<input type="text" placeholder="Phone Number" class="form-control" name="phone_number">
+						</div>
+						<div class="form-group">
+							<input type="text" placeholder="Address" id="addr" class="form-control" name="address" onclick="getAddress()" readonly="readonly">
+						</div>
+						
+						<div class="form-group">
+							<input type="submit" value="Post" class="btn btn-primary py-3 px-5">
+						</div>
+					</form>
+				</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</div>
 </body>

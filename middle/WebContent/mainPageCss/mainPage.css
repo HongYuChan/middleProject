@@ -994,6 +994,12 @@ h3 {
   color: #fff;
 }
 
+#sign-up-text {
+	padding-bottom: 100px;
+}
+
+
+
 /* line 160, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li .submenu {
   position: absolute;
