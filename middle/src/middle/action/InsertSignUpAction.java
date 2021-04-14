@@ -12,8 +12,8 @@ public class InsertSignUpAction implements Action {
         ActionForward forward = new ActionForward();
         
         MemberService service = MemberService.getInstance();
-        service.insertSignUpService(request);
-        
+        int para = service.insertSignUpService(request);
+        request.setAttribute("loginCheck", para);
         forward.setRedirect(true);
         forward.setPath("insertSignUpForm.do");
         

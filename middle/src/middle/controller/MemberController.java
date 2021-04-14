@@ -13,6 +13,9 @@ import middle.action.Action;
 import middle.action.ActionForward;
 import middle.action.InsertSignUpAction;
 import middle.action.InsertSignUpForm;
+import middle.action.LoginAction;
+import middle.action.LoginFormAction;
+import middle.action.MainPageAction;
 
 /**
  * 
@@ -35,24 +38,45 @@ public class MemberController extends HttpServlet {
 		Action action = null;
 		ActionForward forward = null;
 
-		if (command.equals("insertSignUpAction.do")) {
+		if(command.equals("insertSignUpAction.do")) {
 			action = new InsertSignUpAction();
 			try {
 				forward = action.excute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		} else if (command.equals("insertSignUpForm.do")) {
+		} else if(command.equals("insertSignUpForm.do")) {
 			action = new InsertSignUpForm();
 			try {
 				forward = action.excute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}
+		} else if(command.equals("loginAction.do")) {
+			action = new LoginAction();
+			try {
+				forward = action.excute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else if(command.equals("loginForm.do")) {
+			action = new LoginFormAction();
+			try {
+				forward = action.excute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("mainPage.do")) {
+    		action = new MainPageAction();
+    		try {
+				forward = action.excute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}
 
-		if (forward != null) {
-			if (forward.isRedirect()) {
+		if(forward != null) {
+			if(forward.isRedirect()) {
 				response.sendRedirect(forward.getPath());
 			} else {
 				RequestDispatcher dipDispatcher = request.getRequestDispatcher(forward.getPath());

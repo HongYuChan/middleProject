@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +27,7 @@
 <!-- 폰트 및 부트스트랩 -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
 <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
-<script src="../js/insertProduct.js" type="text/javascript"></script>
+<script src="../js/loginForm.js" type="text/javascript"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../js/logIn.js" charset="utf-8"></script>
 
@@ -37,7 +38,7 @@
 			<div class="row block-9">
 				<div class="col-md-6 pr-md-5">
 				<!-- insertSignUpAction.do -->
-					<form action="insertSignUpAction.do" id="signForm" method="post">
+					<form action="loginAction.do" id="signForm" method="post" onsubmit="loginCheck()">
 						<div class="form-group">
 							<input type="text" placeholder="ID" class="form-control" name="id">
 						</div>

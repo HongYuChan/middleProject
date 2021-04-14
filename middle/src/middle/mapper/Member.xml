@@ -11,4 +11,7 @@
             SEQ_MEMBER.NEXTVAL, #{id}, #{password}, #{nickname}, #{email}, #{phone_number}, #{address}, #{name}
         )
     </insert>
+    <select id="loginCheck" parameterType="String" resultType="Member">
+    	select * from MEMBER where id = #{id}
+    </select>
 </mapper>

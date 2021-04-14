@@ -1,5 +1,7 @@
 package middle.service;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import middle.model.Member;
@@ -28,4 +30,15 @@ public class MemberService {
         
         return memberDao.insertSignUp(member);
     }
+    
+    public Member loginCheckService(HttpServletRequest request)throws Exception {
+		request.setCharacterEncoding("utf-8");
+		String id = request.getParameter("id");
+		
+		System.out.println("id = " + id);
+		
+		Member member = (Member)memberDao.loginCheck(id);
+		return member;
+	}
+    
 }

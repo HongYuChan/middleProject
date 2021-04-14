@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="EUC-KR" session="true"%>
+<%
+	String user = (String)session.getAttribute("user");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -107,6 +110,7 @@
 				<div class="row align-items-center justify-content-center">
 					<div class="col-xl-9">
 						<div class="slider_text text-center">
+							<P>user : <%= user %></P>
 							<p>Test Search Video</p>
 							<h3>Main Search Page</h3>
 							<div class="find_dowmain">

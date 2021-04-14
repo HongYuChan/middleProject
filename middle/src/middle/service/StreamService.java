@@ -21,7 +21,7 @@ public class StreamService {
 	}
 	
 	public Video streamingService(HttpServletRequest request)throws Exception {
-		request.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("utf-8");
 		Video video = new Video();
 		int seq = 0;
 		video = dao.streamBoard(seq);
@@ -30,7 +30,7 @@ public class StreamService {
 	}
 	
 	public int insertVideoService(HttpServletRequest request)throws Exception {
-		request.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("utf-8");
 		String webPath = request.getServletContext().getRealPath("/videos");
 		System.out.println(webPath);
 //		C:\\Users\\KOSTA\\eclipse-workspace\\testProject\\WebContent\\videos
@@ -50,7 +50,7 @@ public class StreamService {
 	}
 	
 	public int insertProductService(HttpServletRequest request)throws Exception {
-		request.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("utf-8");
 		
 		String webPath = request.getServletContext().getRealPath("/videos");
 		MultipartRequest multi = new MultipartRequest(request, webPath);
