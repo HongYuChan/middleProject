@@ -10,7 +10,7 @@ import middle.service.MemberService;
 public class LoginAction implements Action {
 
 	@Override
-	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
 		
 		MemberService service = MemberService.getInstance();
@@ -25,8 +25,8 @@ public class LoginAction implements Action {
 			forward.setPath("mainPage.do");
 		}else {
 			System.out.println("Nope");
-			forward.setRedirect(true);
-			forward.setPath("/views/mainPage.jsp");
+			forward.setRedirect(false);
+			forward.setPath("loginForm.do");
 		}
 		
 		return forward;

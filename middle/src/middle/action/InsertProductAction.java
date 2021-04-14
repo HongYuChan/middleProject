@@ -10,7 +10,7 @@ import middle.service.StreamService;
 public class InsertProductAction implements Action {
 
 	@Override
-	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
 		
 		StreamService service = StreamService.getInstance();

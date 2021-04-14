@@ -22,6 +22,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
 <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../js/mainPage.js"></script>
 </head>
 <body>
 	<header>
@@ -66,7 +67,7 @@
 						</div>
 						<div class="col-xl-3 col-lg-3 d-done d-lg-block">
 							<div class="log_chat_area d-flex align-items-center">
-								<a href="#" class="login popup-with-form">
+								<a href="javascript:popupLogin()" class="login popup-with-form">
 									<i class="flaticon-user"></i>
 									<span>log in</span>
 								</a>
