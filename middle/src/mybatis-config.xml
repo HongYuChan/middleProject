@@ -4,38 +4,28 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-
-	<settings>
-		<setting name="jdbcTypeForNull" value="NULL"/>
-	</settings>
-
-	<typeAliases>
+    <typeAliases>
+        <typeAlias type="middle.model.StreamTest" alias="Stream"/>
+        <typeAlias type="middle.model.Video" alias="Video"/>
+        <typeAlias type="middle.model.Product" alias="Product"/>
+        <typeAlias type="middle.model.Member" alias="Member"/>
 		<typeAlias type="middle.model.NoticeBoard" alias="NoticeBoard"/>
 		<typeAlias type="middle.model.NoticeSearch" alias="NoticeSearch"/>
-	</typeAliases>
-	
-	<environments default="development">
-		<environment id="development">
-			<transactionManager type="JDBC"/>
-			<dataSource type="JNDI">
-				<property name="data_source" value="java:comp/env/jdbc/oracle"/>
-			</dataSource>
-		</environment>		
-	</environments>
-	
-	<mappers>
+    </typeAliases>
+    
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="JNDI">
+                <property name="data_source" value="java:comp/env/jdbc/oracle"/>
+            </dataSource>
+        </environment>        
+    </environments>
+    
+    <mappers>
+        <mapper resource="middle/mapper/Stream.xml"/>
+        <mapper resource="middle/mapper/Member.xml"/>
 		<mapper resource="middle/mapper/NoticeBoard.xml"/>
-	</mappers>
-	
-	
+    </mappers>
+    
 </configuration>
-
-
-
-
-
-
-
-
-
-

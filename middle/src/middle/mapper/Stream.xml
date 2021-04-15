@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="testProject.mapper.StreamMapper">
+	<cache/>
+	<insert id="insertProduct" parameterType="Product">
+		
+		insert into product(
+			PRODUCT_ID, PRODUCT_NAME, TITLE, PRODUCT_INFO, MIN_PRICE, PAY_METHOD, CREATE_DATE, SALE_DATE, USER_ID
+		)values(
+			SEQ_PRODUCTID.NEXTVAL, #{product_name}, #{title}, #{product_info}, #{min_price}, #{pay_method}, SYSDATE, TO_DATE(#{sale_date}, 'MM/DD/YYYY'), 1
+		)
+	</insert>
+	
+	<select id="streamBoard" parameterType="String" resultType="Video">
+		select * from videos where product_id = 10;
+	</select>
+</mapper>
