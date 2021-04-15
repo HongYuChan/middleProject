@@ -19,9 +19,12 @@
 <link rel="stylesheet" href="../mainPageCss/animate.css">
 <link rel="stylesheet" href="../mainPageCss/slicknav.css">
 <link rel="stylesheet" href="../mainPageCss/mainPage.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/f73ccf4d61.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
 <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../js/mainPage.js"></script>
 </head>
 <body>
 	<header>
@@ -42,22 +45,27 @@
 									<ul id="navigation">
 										<li>
 											<a class="active" href="#">
-												menu1
+												Home
 											</a>
 										</li>
 										<li>
 											<a class="active" href="#">
-												menu2
+												Notice
 											</a>
 										</li>
 										<li>
 											<a class="active" href="#">
-												menu3
+												MyPage
 											</a>
 										</li>
 										<li>
 											<a class="active" href="#">
 												menu4
+											</a>
+										</li>
+										<li>
+											<a class="active" href="#">
+												menu5
 											</a>
 										</li>
 									</ul>
@@ -66,14 +74,14 @@
 						</div>
 						<div class="col-xl-3 col-lg-3 d-done d-lg-block">
 							<div class="log_chat_area d-flex align-items-center">
-								<a href="#" class="login popup-with-form">
-									<i class="flaticon-user"></i>
+								<a href="loginForm.do" class="login popup-with-form">
+									<i class="fas fa-sign-in-alt"></i>
 									<span>log in</span>
 								</a>
 								<div class="live_chat_btn">
-									<a class="boxed_btn_green" href="#">
-										<i class="flaticon-chat"></i>
-										<span>Live chat</span>
+									<a href="insertSignUpForm.do">
+										<i class="fas fa-user-plus"></i>
+										<span>Sign Up</span>
 									</a>
 								</div>
 							</div>
