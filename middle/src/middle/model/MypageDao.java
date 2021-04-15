@@ -59,11 +59,42 @@ public class MypageDao {
 		return product;
 	}	//user_id에 따른 상품 조회
 	
-	public int modifyprofile(Member member) {
+	public Member_img memberImg(int user_id) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		Member_img mimg = new Member_img();
+		try {
+			mimg = sqlSession.getMapper(Mypagemapper.class).memberImg(user_id);
+			System.out.println(mimg.getUrl());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+		return mimg;
+	}	//user_id로 멤버 이미지 조회
+	
+	public Image productImg(int product_id) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		Image image = new Image();
+		try {
+			image = sqlSession.getMapper(Mypagemapper.class).productImg(product_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+		return image;
+	}	//product_id로 상품 이미지 조회
+	
+	public int modifypassword(Member member) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		int suc = -1;
 		try {
-			suc = sqlSession.getMapper(Mypagemapper.class).modifyprofile(member);
+			suc = sqlSession.getMapper(Mypagemapper.class).modifypassword(member);
 			if(suc > 0) {
 				sqlSession.commit();
 			}else {
@@ -76,13 +107,51 @@ public class MypageDao {
 			{sqlSession.close();}
 		}
 		return suc;
-	}	//프로필 수정
+	}	//패스워드 수정
+	
+	public int modifynickname(Member member) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int suc = -1;
+		try {
+			suc = sqlSession.getMapper(Mypagemapper.class).modifynickname(member);
+			if(suc > 0) {
+				sqlSession.commit();
+			}else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(sqlSession!=null)
+			{sqlSession.close();}
+		}
+		return suc;
+	}	//닉네임 수정
+	
+	public int modifyemail(Member member) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int suc = -1;
+		try {
+			suc = sqlSession.getMapper(Mypagemapper.class).modifyemail(member);
+			if(suc > 0) {
+				sqlSession.commit();
+			}else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(sqlSession!=null)
+			{sqlSession.close();}
+		}
+		return suc;
+	}	//이메일 수정
 	
 	public int deletemember(int user_id) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		int suc = -1;
 		try {
-			suc = sqlSession.getMapper(Mypagemapper.class).deletemember(user_id);
+			suc = sqlSession.delete("middle.mapper.Mypagemapper.deletemember",user_id);
 			if(suc > 0) {
 				sqlSession.commit();
 			}else {

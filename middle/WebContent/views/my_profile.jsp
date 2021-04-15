@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,27 +35,30 @@
 	<!-- 현재 페이지 제목 -->
 	<h1>회원정보</h1>
 	<!-- 회색 선 긋기 -->
-	<img alt="" src=""id="proflie_photo">
-	<ul>
-		<a href="modifyform.do?user_id=${member.user_id}"><input type="submit" value="프로필 수정"></a>
-		<li>${member.nickname} = 별명</li>
-		<li>${member.email} = 이메일</li>
-	</ul>
-	
-	<h2>마지막 거래내역</h2>
-	<!-- 회색 선 긋기 -->
-		<ul>
-			<img alt="" src="" id="recent_trade">
-			<li>${product.product_name}제품 이름</li>
-			<li>${member.nickname}판매자</li>
-		</ul>
-		
-	<h2>최근 업로드 영상</h2>
-		<img alt="" src="" id="recent_upload">
-		<ul>
-			<li>${product.product_name}제품 이름</li>
-		</ul>
-	
-	
+	<table border="0">
+		<tbody>
+			<th><img src="${mimg.url}" class="profile_photo"><br>
+				<a href="modifyform.do?user_id=${member.user_id}"><input type="submit" value="프로필 수정"></a></th>
+			<td>${member.nickname}<br>
+				${member.email} </td>
+			
+		</tbody>
+	</table>
+	<table>
+		<tbody>
+			<h2>마지막 거래내역</h2>
+			<!-- 회색 선 긋기 -->
+			<th><img src="${pimg.image_url}" id="recent_trade"></th>
+			<td>${product.product_name}</td>
+			
+		</tbody>
+	</table>
+	<tbody>
+		<h2>최근 업로드 영상</h2>
+		<!-- 회색 선 긋기 -->
+		<th><img alt="" src="" id="recent_upload"></th>
+		<td>${product.product_name}</td>
+	</tbody>
+	</table>
 </body>
 </html>

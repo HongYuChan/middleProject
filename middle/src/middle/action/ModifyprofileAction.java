@@ -12,22 +12,24 @@ public class ModifyprofileAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
 		MypageService service = MypageService.getInstance();
-		int user_id = Integer.getInteger(request.getParameter("user_id"));
+		System.out.println("123");
+		int user_id = Integer.parseInt(request.getParameter("user_id"));
+		System.out.println("1234");
 		Member member = service.myprofileService(user_id);
+		System.out.println(member.getUser_id());
 		
 		if(request.getParameter("pre_password").equals(member.getPassword()) 
 				& request.getParameter("after_password").equals(request.getParameter("password_check"))) {
 			member.setPassword(request.getParameter("after_password"));
-		}//패스워드 변경
+			member.setNickname(request.getParameter("nickname")); 
+			member.setEmail(request.getParameter("email"));
+		}
 		
-		/* else if(request.getParameter("nickname") != null) {
-		 * member.setNickname(request.getParameter("nickname")); }//닉네임 변경 else
-		 * if(request.getParameter("email") != null) {
-		 * member.setEmail(request.getParameter("email")); }//이메일 변경
-		 */		
-		service.modifyService(member);
-		forward.setRedirect(true);
-		forward.setPath("myprofile.do");
+		service.modifyPassService(member);
+		service.modifyNickService(member);
+		service.modifyEmailService(member);
+		forward.setRedirect(false);
+		forward.setPath("modifyform.do");
 		return forward;
 	}
 

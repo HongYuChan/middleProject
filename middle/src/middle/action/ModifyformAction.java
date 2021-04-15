@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import middle.model.Member;
+import middle.model.Member_img;
 import middle.service.MypageService;
 
 public class ModifyformAction implements Action {
@@ -14,9 +15,12 @@ public class ModifyformAction implements Action {
 		MypageService service = MypageService.getInstance();
 		int user_id = Integer.parseInt(request.getParameter("user_id"));
 		Member member = service.myprofileService(user_id);
+		Member_img mimg = service.profileImgService(user_id);
 		
 		request.setAttribute("member", member);
-		System.out.println(member.getID());
+		request.setAttribute("mimg", mimg);
+		
+		
 		forward.setRedirect(false);
 		forward.setPath("/views/modify_profile.jsp");
 		return forward;

@@ -17,8 +17,16 @@
  		select * from product where user_id = #{user_id}
  	</select>
  	
- 	<update id="modifyprofile" parameterType="int">
- 		update member set nickname=#{nickname}, password=#{password}, email=#{email} where user_id = #{user_id}
+ 	<update id="modifypassword" parameterType="int">
+ 		update member set password=#{password} where user_id = #{user_id}
+ 	</update>
+ 	
+ 	<update id="modifynickname" parameterType="int">
+ 		update member set nickname=#{nickname} where user_id = #{user_id}
+ 	</update>
+ 	
+ 	<update id="modifyemail" parameterType="int">
+ 		update member set email=#{email} where user_id = #{user_id}
  	</update>
  	
  	<delete id="deletemember" parameterType="int">
@@ -31,6 +39,11 @@
 	
 	<select id="buyList" parameterType="int" resultType="Product">
 		select * from product where buyer_id = #{user_id}
+	</select>
+	
+	<select id="memberImg" parameterType="int" resultType="Member_img">
+		select i.image_id, i.user_id, i.url from member m inner join member_img i on m.user_id = i.user_id
+		where m.user_id = #{user_id}
 	</select>
 </mapper>
 

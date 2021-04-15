@@ -3,7 +3,9 @@ package middle.service;
 import java.util.List;
 
 import middle.model.Deal;
+import middle.model.Image;
 import middle.model.Member;
+import middle.model.Member_img;
 import middle.model.MypageDao;
 
 public class MypageService {
@@ -17,12 +19,27 @@ public class MypageService {
 	}
 	
 	public Member myprofileService(int user_id) {
-		System.out.println("¼­ºñ½º");
 		return dao.myprofile(user_id);
 	}
 	
-	public int modifyService(Member member) {
-		return dao.modifyprofile(member);
+	public Member_img profileImgService(int user_id) {
+		return dao.memberImg(user_id);
+	}
+	
+	public Image productImgService(int product_id) {
+		return dao.productImg(product_id);
+	}
+	
+	public int modifyPassService(Member member) {
+		return dao.modifypassword(member);
+	}
+	
+	public int modifyNickService(Member member) {
+		return dao.modifynickname(member);
+	}
+	
+	public int modifyEmailService(Member member) {
+		return dao.modifyemail(member);
 	}
 	
 	public int deleteService(int user_id) {

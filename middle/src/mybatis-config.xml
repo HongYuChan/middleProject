@@ -13,6 +13,7 @@
 		<typeAlias type="middle.model.Member" alias="Member"/>
 		<typeAlias type="middle.model.Product" alias="Product"/>
 		<typeAlias type="middle.model.Deal" alias="Deal"/>
+		<typeAlias type="middle.model.Member_img" alias="Member_img"/>
 	</typeAliases>
 	
 	<environments default="development">
