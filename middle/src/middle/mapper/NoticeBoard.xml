@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<mapper namespace="middle.mapper.NoticeBoardMapper">
+	<cache />
+	
+	<insert id="noticeInsertBoard" parameterType="NoticeBoard">
+		insert into notice(
+			notice_id, notice_title, notice_contents, notice_writer, notice_date
+		)
+		values(
+			seq_noticeid.NEXTVAL, #{notice_title}, #{notice_contents}, #{notice_writer}, SYSDATE
+		)
+	</insert>
+	
+	<select id="noticeListBoard" resultType="NoticeBoard" parameterType="NoticeSearch">
+		select * from notice
+			
+		<if test="area != null">
+			<where>
+				<!-- where (title LIKE %%aa% OR writer LIKE %aa%) -->
+				<foreach collection="area" item="item" separator="OR"
+					open="(" close=")">
+					${item} LIKE #{searchKey}
+				</foreach>
+			</where>
+		</if>
+		
+		 order by notice_id desc
+	</select>
+	
+	<select id="noticeDetailBoard" parameterType="int" resultType="NoticeBoard">
+		select * from notice where notice_id = #{notice_id}
+	</select>
+	
+	<update id="noticeUpdateBoard" parameterType="noticeBoard">
+		update notice set notice_title = #{notice_title}, notice_contents = #{notice_contents}
+			where notice_id = #{notice_id}
+	</update>
+	
+	<delete id="noticeDeleteBoard" parameterType="int">
+		delete from notice where notice_id = #{notice_id}
+	</delete>
+	
+	<select id="noticeCountBoard" resultType="int" parameterType="NoticeSearch"><!-- 총 글갯수 페이징-->
+		select count(*) from notice
+		<if test="area != null">
+			<where>
+				<!-- where (title LIKE %%aa% OR writer LIKE %aa%) -->
+				<foreach collection="area" item="item" separator="OR"
+					open="(" close=")">
+					${item} LIKE #{searchKey}
+				</foreach>
+			</where>
+		</if>
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
