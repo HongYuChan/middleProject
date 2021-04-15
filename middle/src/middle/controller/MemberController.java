@@ -41,35 +41,35 @@ public class MemberController extends HttpServlet {
 		if(command.equals("insertSignUpAction.do")) {
 			action = new InsertSignUpAction();
 			try {
-				forward = action.excute(request, response);
+				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		} else if(command.equals("insertSignUpForm.do")) {
 			action = new InsertSignUpForm();
 			try {
-				forward = action.excute(request, response);
+				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		} else if(command.equals("loginAction.do")) {
 			action = new LoginAction();
 			try {
-				forward = action.excute(request, response);
+				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		} else if(command.equals("loginForm.do")) {
 			action = new LoginFormAction();
 			try {
-				forward = action.excute(request, response);
+				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}else if(command.equals("mainPage.do")) {
     		action = new MainPageAction();
     		try {
-				forward = action.excute(request, response);
+				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

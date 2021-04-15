@@ -75,7 +75,11 @@
 						<div class="col-xl-3 col-lg-3 d-done d-lg-block">
 							<div class="log_chat_area d-flex align-items-center">
 								<a href="loginForm.do" class="login popup-with-form">
+<<<<<<< HEAD
 									<i class="fas fa-sign-in-alt"></i>
+=======
+									<i class="flaticon-user"></i>
+>>>>>>> develop
 									<span>log in</span>
 								</a>
 								<div class="live_chat_btn">

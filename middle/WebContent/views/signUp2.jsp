@@ -16,10 +16,8 @@
 <link rel="stylesheet" href="../mainPageCss/animate.css">
 <link rel="stylesheet" href="../mainPageCss/slicknav.css">
 <link rel="stylesheet" href="../mainPageCss/mainPage.css">
-<<<<<<< HEAD
-<script src="https://kit.fontawesome.com/f73ccf4d61.js"></script>
-=======
->>>>>>> develop
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome-ie7.min.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
 <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -44,29 +42,17 @@
 									<ul id="navigation">
 										<li>
 											<a class="active" href="#">
-<<<<<<< HEAD
-												Home
-=======
 												menu1
->>>>>>> develop
 											</a>
 										</li>
 										<li>
 											<a class="active" href="#">
-<<<<<<< HEAD
-												Notice
-=======
 												menu2
->>>>>>> develop
 											</a>
 										</li>
 										<li>
 											<a class="active" href="#">
-<<<<<<< HEAD
-												MyPage
-=======
 												menu3
->>>>>>> develop
 											</a>
 										</li>
 										<li>
@@ -74,30 +60,12 @@
 												menu4
 											</a>
 										</li>
-<<<<<<< HEAD
-										<li>
-											<a class="active" href="#">
-												menu5
-											</a>
-										</li>
-=======
->>>>>>> develop
 									</ul>
 								</nav>
 							</div>
 						</div>
 						<div class="col-xl-3 col-lg-3 d-done d-lg-block">
 							<div class="log_chat_area d-flex align-items-center">
-<<<<<<< HEAD
-								<a href="loginForm.do" class="login popup-with-form">
-									<i class="fas fa-sign-in-alt"></i>
-									<span>log in</span>
-								</a>
-								<div class="live_chat_btn">
-									<a href="insertSignUpForm.do">
-										<i class="fas fa-user-plus"></i>
-										<span>Sign Up</span>
-=======
 								<a href="javascript:popupLogin()" class="login popup-with-form">
 									<i class="flaticon-user"></i>
 									<span>log in</span>
@@ -106,7 +74,6 @@
 									<a class="boxed_btn_green" href="#">
 										<i class="flaticon-chat"></i>
 										<span>Live chat</span>
->>>>>>> develop
 									</a>
 								</div>
 							</div>
@@ -144,14 +111,30 @@
 				<div class="col-md-6 pr-md-5">
 				<!-- insertSignUpAction.do -->
 				<div class="slider_text text-center">
-				<h3>Log In Page</h3>
-					<form action="loginAction.do" id="signForm" method="post" onsubmit="loginCheck()" name="popupForm">
+				
+					<form action="insertSignUpAction.do" id="signForm" method="post">
+						<div class="form-group">
+							<input type="text" placeholder="Name" class="form-control" name="name">
+						</div>
 						<div class="form-group">
 							<input type="text" placeholder="ID" class="form-control" name="id">
 						</div>
 						<div class="form-group">
-							<input type="password" placeholder="PassWord" class="form-control" name="password">
+							<input type="password" id="pw" placeholder="Password" class="form-control" name="password" onblur="checkPass()">
 						</div>
+						<div class="form-group">
+							<input type="text" placeholder="NickName" class="form-control" name="nickname">
+						</div>
+						<div class="form-group">
+							<input type="text" placeholder="Email" class="form-control" name="email">
+						</div>
+						<div class="form-group">
+							<input type="text" placeholder="Phone Number" class="form-control" name="phone_number">
+						</div>
+						<div class="form-group">
+							<input type="text" placeholder="Address" id="addr" class="form-control" name="address" onclick="getAddress()" readonly="readonly">
+						</div>
+						
 						<div class="form-group">
 							<input type="submit" value="Post" class="btn btn-primary py-3 px-5">
 						</div>

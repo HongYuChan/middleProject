@@ -13,6 +13,14 @@
   justify-content: start;
 }
 
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /* Normal desktop :1200px. */
 /* Normal desktop :992px. */
 /* Tablet desktop :768px. */
@@ -985,6 +993,12 @@ h3 {
 .header-area .main-header-area .main-menu ul li a:hover {
   color: #fff;
 }
+
+#sign-up-text {
+	padding-bottom: 100px;
+}
+
+
 
 /* line 160, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li .submenu {

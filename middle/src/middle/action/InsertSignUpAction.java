@@ -8,7 +8,7 @@ import middle.service.MemberService;
 public class InsertSignUpAction implements Action {
 
     @Override
-    public ActionForward excute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         ActionForward forward = new ActionForward();
         
         MemberService service = MemberService.getInstance();
