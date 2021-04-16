@@ -1,4 +1,4 @@
-package middle.model;
+ package middle.model;
 
 import java.io.Serializable;
 
