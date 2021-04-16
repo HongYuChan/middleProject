@@ -124,9 +124,9 @@
 							<p>Test Search Video</p>
 							<h3>Main Search Page</h3>
 							<div class="find_dowmain">
-								<form action="#" class="find_dowmain_form" method="post">
+								<form action="streamPage.do" class="find_dowmain_form" method="post">
 									<input type="text" placeholder="Find Video" name="key">
-									<button type="submit" onclick="location='streamPage.jsp'">Search</button>
+									<button type="submit">Search</button>
 								</form>
 							</div>
 						</div>
