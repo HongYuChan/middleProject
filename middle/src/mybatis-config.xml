@@ -9,6 +9,8 @@
         <typeAlias type="middle.model.Video" alias="Video"/>
         <typeAlias type="middle.model.Product" alias="Product"/>
         <typeAlias type="middle.model.Member" alias="Member"/>
+		<typeAlias type="middle.model.NoticeBoard" alias="NoticeBoard"/>
+		<typeAlias type="middle.model.NoticeSearch" alias="NoticeSearch"/>
     </typeAliases>
     
     <environments default="development">
@@ -23,6 +25,7 @@
     <mappers>
         <mapper resource="middle/mapper/Stream.xml"/>
         <mapper resource="middle/mapper/Member.xml"/>
+		<mapper resource="middle/mapper/NoticeBoard.xml"/>
     </mappers>
     
 </configuration>
