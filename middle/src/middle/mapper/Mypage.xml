@@ -6,16 +6,17 @@
 
 <mapper namespace="middle.mapper.Mypagemapper">
 	<cache />
-	
+	<!-- 
 	<select id="member" parameterType="int" resultType="Member">
 		select * from member where user_id = #{user_id}
 	</select>
-	
- 	<select id="myprofile" parameterType="int" resultType="Member_Product">
- 		select  m.user_id, m.id, m.password, m.nickname, m.email, m.photne_number m.address, m.holding_coin, m.evaluation, m.name,
+	 -->
+ 	<select id="myprofile" parameterType="int" resultType="Member">
+ 		<!-- select  m.user_id, m.id, m.password, m.nickname, m.email, m.photne_number m.address, m.holding_coin, m.evaluation, m.name,
 				p.product_id, p.product_name, p.title, p.sale_date, p.buter_id, i.image_url
 		from member m inner join product p on m.user_id = p.user_id inner join images i on p.product_id = i.product_id
- 		where m.user_id = #{user_id}
+ 		where m.user_id = #{user_id} -->
+ 		select * from member where user_id = #{user_id}
  	</select>
  	
  	<select id="myproduct" parameterType="int" resultType="Product">

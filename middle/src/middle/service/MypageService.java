@@ -19,11 +19,15 @@ public class MypageService {
 		return service;
 	}
 	
-	public Member memberService(int user_id) {
+	/*public Member memberService(int user_id) {
 		return dao.member(user_id);
 	}
 	
 	public Member_Product myprofileService(int user_id) {
+		return dao.myprofile(user_id);
+	}*/
+	
+	public Member myprofileService(int user_id) {
 		return dao.myprofile(user_id);
 	}
 	

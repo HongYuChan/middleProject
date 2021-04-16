@@ -12,20 +12,18 @@ import middle.service.MypageService;
 
 public class MyprofileAction implements Action {
 
-	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
 		MypageService service = MypageService.getInstance();
-		int user_id = 3;//Integer.parseInt(request.getParameter("user_id"));
-		Member_Product member_p = service.myprofileService(user_id);
+		int user_id =3; //Integer.parseInt(request.getParameter("user_id"));
+		Member member = service.myprofileService(user_id);
 		Member_img mimg = service.profileImgService(user_id);
 		
-		
-		request.setAttribute("member_p", member_p);
+		request.setAttribute("member", member);
 		request.setAttribute("mimg", mimg);
+		
 		forward.setRedirect(false);
 		forward.setPath("/views/my_profile.jsp");
 		return forward;
 	}
-
 }

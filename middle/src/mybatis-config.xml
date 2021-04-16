@@ -15,6 +15,8 @@
 		<typeAlias type="middle.model.Deal" alias="Deal"/>
 		<typeAlias type="middle.model.Member_img" alias="Member_img"/>
 		<typeAlias type="middle.model.Member_Product" alias="Member_Product"/>
+        <typeAlias type="middle.model.StreamTest" alias="Stream"/>
+        <typeAlias type="middle.model.Video" alias="Video"/>
 	</typeAliases>
 	
 	<environments default="development">
@@ -28,17 +30,10 @@
 	
 	<mappers>
 		<mapper resource="middle/mapper/Mypage.xml"/>
+		<mapper resource="middle/mapper/Stream.xml"/>
+        <mapper resource="middle/mapper/Member.xml"/>
 	</mappers>
 	
 	
 </configuration>
-
-
-
-
-
-
-
-
-
 

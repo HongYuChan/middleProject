@@ -29,7 +29,7 @@ public class MypageDao {
 		return new SqlSessionFactoryBuilder().build(in);
 	}
 	
-	public Member member(int user_id) {
+	/*public Member member(int user_id) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		Member member = new Member();
 		try {
@@ -47,6 +47,21 @@ public class MypageDao {
 	public Member_Product myprofile(int user_id) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		Member_Product member = new Member_Product();
+		try {
+			member = sqlSession.getMapper(Mypagemapper.class).myprofile(user_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+		return member;
+	}	//내 프로필 조회*/
+	
+	public Member myprofile(int user_id) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		Member member = new Member();
 		try {
 			member = sqlSession.getMapper(Mypagemapper.class).myprofile(user_id);
 		} catch (Exception e) {

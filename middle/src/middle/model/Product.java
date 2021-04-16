@@ -13,14 +13,14 @@ public class Product implements Serializable{
 	private String pay_method;
 	private String create_date;
 	private String sale_date;
-	private char status;
+	private String status;
 	private int buyer_id;
 	private int sale_price;
 	public Product() {
 		super();
 	}
 	public Product(int product_id, int user_id, int category_id, String product_name, String title, String product_info,
-			int min_price, String pay_method, String create_date, String sale_date, char status, int buyer_id,
+			int min_price, String pay_method, String create_date, String sale_date, String status, int buyer_id,
 			int sale_price) {
 		super();
 		this.product_id = product_id;
@@ -97,10 +97,10 @@ public class Product implements Serializable{
 	public void setSale_date(String sale_date) {
 		this.sale_date = sale_date;
 	}
-	public char getStatus() {
+	public String getStatus() {
 		return status;
 	}
-	public void setStatus(char status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 	public int getBuyer_id() {
@@ -112,8 +112,6 @@ public class Product implements Serializable{
 	public int getSale_price() {
 		return sale_price;
 	}
-	public void setSale_price(int sale_price) {
-		this.sale_price = sale_price;
-	}
 	
+
 }

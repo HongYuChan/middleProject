@@ -10,8 +10,9 @@ import middle.model.Member_img;
 import middle.model.Product;
 
 public interface Mypagemapper {
-	Member_Product myprofile(int user_id);
-	Member member(int user_id);	//멤버 참고용
+	//Member_Product myprofile(int user_id);
+	//Member member(int user_id);	//멤버 참고용
+	Member myprofile(int user_id);
 	Product myproduct(int user_id);
 	Member_img memberImg(int user_id);
 	Image productImg(int product_id);

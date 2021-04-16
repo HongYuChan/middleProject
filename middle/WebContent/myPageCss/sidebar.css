@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.sidebar{
+	float: left;
+	margin-left: 20px;
+	position: relative;
+	
+}
+.sidebar ul{
+	list-style-type:none;
+	width: 140px;
+	padding: 10px;
+	margin: 0;
+	position: fixed;
+	height: 225px;
+	overflow: auto;
+	border: 1px white solid;
+	text-align: center;
+}
+.sidebar li a{
+	text-decoration: none;
+	display:block;
+	color:#000;
+	padding: 8px, 15px, 8px,15px;
+	font-weight: bold;
+}
+#upload_sidebar{
+	border-bottom: 1px solid white;
+}

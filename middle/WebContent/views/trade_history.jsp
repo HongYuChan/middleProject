@@ -14,7 +14,7 @@
 		<img alt="" src="">
 		<ul>
 			<li>제품 이름 : ${product.product_name}</li>
-			<li>판매자 : ${}</li>
+			
 			<li>구매 가격 : ${product.sale_price}</li>
 		</ul>
 	</div>

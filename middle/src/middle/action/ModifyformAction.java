@@ -14,7 +14,7 @@ public class ModifyformAction implements Action {
 		ActionForward forward = new ActionForward();
 		MypageService service = MypageService.getInstance();
 		int user_id = Integer.parseInt(request.getParameter("user_id"));
-		Member member = service.memberService(user_id);
+		Member member = service.myprofileService(user_id);
 		Member_img mimg = service.profileImgService(user_id);
 		
 		request.setAttribute("member", member);

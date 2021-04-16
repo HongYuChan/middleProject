@@ -13,7 +13,7 @@ public class ModifyNicknameAction implements Action {
 		ActionForward forward = new ActionForward();
 		MypageService service = MypageService.getInstance();
 		int user_id = Integer.parseInt(request.getParameter("user_id"));
-		Member member = service.memberService(user_id);
+		Member member = service.myprofileService(user_id);
 		System.out.println(member.getUser_id());
 		
 		if(request.getParameter("nickname") != null) {
