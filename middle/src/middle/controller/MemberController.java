@@ -16,6 +16,7 @@ import middle.action.InsertSignUpForm;
 import middle.action.LoginAction;
 import middle.action.LoginFormAction;
 import middle.action.MainPageAction;
+import middle.action.StreamAction;
 
 /**
  * 
@@ -58,7 +59,7 @@ public class MemberController extends HttpServlet {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
-			}
+			} 
 		} else if(command.equals("loginForm.do")) {
 			action = new LoginFormAction();
 			try {
@@ -68,6 +69,13 @@ public class MemberController extends HttpServlet {
 			}
 		}else if(command.equals("mainPage.do")) {
     		action = new MainPageAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}else if(command.equals("streamPage.do")) {
+    		action = new StreamAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {

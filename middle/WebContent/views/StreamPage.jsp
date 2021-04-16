@@ -14,8 +14,8 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <i class="fab fa-youtube"></i>
-            <span class="title">Youtube</span>
+            <i class=""></i>
+            <span class="title">Stream</span>
         </div>
         <div class="icons">
             <i class="fas fa-search"></i>
@@ -25,12 +25,11 @@
 
     <!-- Video Player -->
     <section class="player">
-    https://youtu.be/embed/ldhXLBZtYcs?autoplay=1&mute=1
-        <iframe width="100%" height="530" src="https://youtube.com/embed/ldhXLBZtYcs?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="530" src="https://youtube.com/embed/_aM1d3KNPB8?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
     <!-- Video Info -->
-    <div class="infoUpNext">
+    <div class="infoAndUpNext">
         <section class="info">
             <!-- Metadata -->
             <div class="metadata">
@@ -41,9 +40,9 @@
                 </ul>
                 <div class="titleAndButton">
                     <span class="title clamp">
-                        [Playlist] 코딩 / 과제 할 때 집중 해서 듣기 좋은 음악 • 2 Hour Lofi Jazz Hip Hop 📚 Chill Study Music
+                        [Playlist] 코딩 / 과제 할 때 집중 해서 듣기 좋은 음악  2 Hour Lofi Jazz Hip Hop  Chill Study Music
                     </span>
-                    <button class="moreButton">
+                    <button class="moreBtn">
                         <i class="fas fa-caret-down">
                         </i>
                     </button>
@@ -71,10 +70,10 @@
             <!-- Channel Description -->
             <div class="channel">
                 <div class="metadata">
-                    <img src="https://yt3.ggpht.com/ytc/AAUvwnj0xOYRyvDWj3i6Ih5_jGphu-q3ECzrwPeRhNCI=s48-c-k-c0xffffffff-no-rj-mo" alt="">
+                    <img src="https://yt3.ggpht.com/ytc/AAUvwni3MBlZUdseZES10RM6EcqEkiN69RrGVSvOcUXy=s48-c-k-c0x00ffffff-no-rj" alt="">
                     <div class="info">
-                        <span class="name">탬탬버린 다시보기</span>
-                        <span class="subscribers">구독자 8.55만명</span>
+                        <span class="name">Lofi 코딩</span>
+                        <span class="subscribers">구독자 2.55만명</span>
                     </div>
                 </div>
                 <button class="subscribe">구독</button>
@@ -84,9 +83,19 @@
             <span class="title">다음 동영상</span>
             <ul>
                 <li class="item">
-                    <div class="thumbnail-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm6N-hhaus22IQefEsJThJPGMd0eftaambFw&usqp=CAU" alt=""></div>
-                    <div class="info">
-                        <span class="title">【 2020.03.27 / 13일의 금요일 (w 강지, 고차비, 금사향, 김똘복, 김뿡, 너불, 이춘향) 】 - 탬탬버린 다시보기
+                    <div class="img"><img src="https://i.ytimg.com/an_webp/Xc1Le3CSdrM/mqdefault_6s.webp?du=3000&sqp=CKnV4oMG&rs=AOn4CLBVVQdjxQtewtl1_pUp6joErcuu4g" alt=""></div>
+                    <div class="itemInfo">
+                        <span class="title">[Playlist] 코딩 / 과제 할 때 집중 해서 듣기 좋은 음악 | 3 hour playlist | lofi coding hip hop - beats to study
+                        </span>
+                        <span class="name">Lofi 코딩</span>
+                        <span class="views">조회수 5.4만회 1개월 전</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="item">
+                    <div class="img"><img src="https://i.ytimg.com/an_webp/4LIt_ICJyjk/mqdefault_6s.webp?du=3000&sqp=CMPM4oMG&rs=AOn4CLA96g8q_pAbL1mU58hPraW8kzsoww" alt=""></div>
+                    <div class="itemInfo">
+                        <span class="title">코딩 & 공부할때 듣는 음악 - 집중할때 듣기 좋은 편안한 Lo-Fi 재즈
                         </span>
                         <span class="name">탬탬버린 다시보기</span>
                         <span class="views">조회수 11만회 1개월 전</span>
@@ -94,32 +103,22 @@
                     <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
                 </li>
                 <li class="item">
-                    <div class="thumbnail-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT76cddmyOlO80wuRRy9M48vVn-kzMACjskMQ&usqp=CAU" alt=""></div>
-                    <div class="info">
-                        <span class="title">【 2020.03.27 / 13일의 금요일 (w 강지, 고차비, 금사향, 김똘복, 김뿡, 너불, 이춘향) 】 - 탬탬버린 다시보기
+                    <div class="img"><img src="https://i.ytimg.com/an_webp/-3CDcU-eco8/mqdefault_6s.webp?du=3000&sqp=CKzB4oMG&rs=AOn4CLCog_k3KMSh1VE0ZI3VSu-TFUYPdg" alt=""></div>
+                    <div class="itemInfo">
+                        <span class="title"> [Playlist] 코딩할때 듣기 좋은 노래 | 3 hour playlist | Lofi hip hop mix ~ jazzhop ~ relax beats
                         </span>
-                        <span class="name">탬탬버린 다시보기</span>
-                        <span class="views">조회수 11만회 1개월 전</span>
+                        <span class="name">Lofi 코딩</span>
+                        <span class="views">조회수 16만회 1개월 전</span>
                     </div>
                     <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
                 </li>
                 <li class="item">
-                    <div class="thumbnail-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9u3yr344RH5HJLjmZDbJz9E4Ed-Z1H5ncZw&usqp=CAU" alt=""></div>
-                    <div class="info">
-                        <span class="title">【 2020.03.27 / 13일의 금요일 (w 강지, 고차비, 금사향, 김똘복, 김뿡, 너불, 이춘향) 】 - 탬탬버린 다시보기
+                    <div class="img"><img src="https://i.ytimg.com/an_webp/cd9bCN5z7jw/mqdefault_6s.webp?du=3000&sqp=CKS34oMG&rs=AOn4CLBEpttyIzVtjlHXwdSBrdfK3clp3Q" alt=""></div>
+                    <div class="itemInfo">
+                        <span class="title"> [Playlist] 일과 공부로 지친 하루를 보낸 후 휴식을 취하기에 좋은 음악  3 hour lofi beat  lofi study chill music beats
                         </span>
-                        <span class="name">탬탬버린 다시보기</span>
-                        <span class="views">조회수 11만회 1개월 전</span>
-                    </div>
-                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
-                </li>
-                <li class="item">
-                    <div class="thumbnail-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpGc__NbyZ9m04zaWfeGvEBWqGx2FH4L1Cbw&usqp=CAU" alt=""></div>
-                    <div class="info">
-                        <span class="title">【 2020.03.27 / 13일의 금요일 (w 강지, 고차비, 금사향, 김똘복, 김뿡, 너불, 이춘향) 】 - 탬탬버린 다시보기
-                        </span>
-                        <span class="name">탬탬버린 다시보기</span>
-                        <span class="views">조회수 11만회 1개월 전</span>
+                        <span class="name">Lofi 코딩</span>
+                        <span class="views">조회수 1.1만회 3주 전</span>
                     </div>
                     <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
                 </li>

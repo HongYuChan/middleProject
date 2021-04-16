@@ -1,8 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR" session="true"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	String user = (String)session.getAttribute("user");
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +46,7 @@
 								<nav>
 									<ul id="navigation">
 										<li>
-											<a class="active" href="#">
+											<a class="active" href="mainPage.do">
 												Home
 											</a>
 										</li>
@@ -75,11 +77,7 @@
 						<div class="col-xl-3 col-lg-3 d-done d-lg-block">
 							<div class="log_chat_area d-flex align-items-center">
 								<a href="loginForm.do" class="login popup-with-form">
-<<<<<<< HEAD
 									<i class="fas fa-sign-in-alt"></i>
-=======
-									<i class="flaticon-user"></i>
->>>>>>> develop
 									<span>log in</span>
 								</a>
 								<div class="live_chat_btn">
@@ -122,13 +120,13 @@
 				<div class="row align-items-center justify-content-center">
 					<div class="col-xl-9">
 						<div class="slider_text text-center">
-							<P>user : <%= user %></P>
+							<P>Welcome <%= user %></P><br>
 							<p>Test Search Video</p>
 							<h3>Main Search Page</h3>
 							<div class="find_dowmain">
-								<form action="#" class="find_dowmain_form">
-									<input type="text" placeholder="Find Video">
-									<button type="submit">Search</button>
+								<form action="#" class="find_dowmain_form" method="post">
+									<input type="text" placeholder="Find Video" name="key">
+									<button type="submit" onclick="location='streamPage.jsp'">Search</button>
 								</form>
 							</div>
 						</div>

@@ -43,7 +43,7 @@
 								<nav>
 									<ul id="navigation">
 										<li>
-											<a class="active" href="#">
+											<a class="active" href="mainPage.do">
 												Home
 											</a>
 										</li>
