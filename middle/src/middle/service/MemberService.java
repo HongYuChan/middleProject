@@ -35,7 +35,6 @@ public class MemberService {
 		request.setCharacterEncoding("utf-8");
 		String id = request.getParameter("id");
 		
-		System.out.println("id = " + id);
 		
 		Member member = (Member)memberDao.loginCheck(id);
 		return member;
