@@ -22,7 +22,7 @@
 					<tr>
 						<th>비밀번호</th>
 						<td>
-						<form action="modifyprofile.do?user_id=${member.user_id}" method="post">
+						<form action="modifypassword.do?user_id=${member.user_id}" method="post">
 							현재 비밀번호 <input type="password" name="pre_password"><br>
 							변경할 비밀번호 <input type="password" name="after_password"><br>
 							비밀번호 확인 <input type="password" name="password_check"><br>
@@ -32,13 +32,21 @@
 					</tr>
 					<tr>
 						<th>닉네임</th>
-						<td><input type="text" name="nickname" value="${member.nickname}">
-							<input type="submit" value="닉네임 변경"></td>
+						<td>
+							<form action="modifynickname.do?user_id=${member.user_id}" method="post">
+							<input type="text" name="nickname" value="${member.nickname}">
+							<input type="submit" value="닉네임 변경">
+							</form>
+						</td>
 					</tr>
 					<tr>
 						<th>이메일</th>
-						<td><input type="email" name="email" value="${member.email}">
-							<input type="submit" value="이메일 변경"></td>
+						<td>
+							<form action="modifyemail.do?user_id=${member.user_id}" method="post">
+							<input type="email" name="email" value="${member.email}">
+							<input type="submit" value="이메일 변경">
+							</form>
+						</td>
 					</tr>
 					<tr>
 						<th>프로필 사진</th>

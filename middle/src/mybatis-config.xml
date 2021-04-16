@@ -14,6 +14,7 @@
 		<typeAlias type="middle.model.Product" alias="Product"/>
 		<typeAlias type="middle.model.Deal" alias="Deal"/>
 		<typeAlias type="middle.model.Member_img" alias="Member_img"/>
+		<typeAlias type="middle.model.Member_Product" alias="Member_Product"/>
 	</typeAliases>
 	
 	<environments default="development">

@@ -23,12 +23,12 @@
 	<!-- 사이드바 -->	
 	<ul>
 		<li><a href="">내 프로필</a></li>
-		<li><a href="tradehistory.do?user_id=${member.user_id}">거래내역</a></li>
+		<li><a href="tradehistory.do?user_id=${member_p.user_id}">거래내역</a></li>
 		<li><a href="">찜 목록</a></li>
 		<li id="upload_sidebar"><a href="">업로드</a></li>
 		<!-- 여기에 선긋기 -->
 		<li>보유중인 코인</li>
-		<li>${member.holding_coin} 코인</li><br>
+		<li>${member_p.holding_coin} 코인</li><br>
 		<a href=""><input type="submit" value="코인충전"></a>
 	</ul>
 	
@@ -38,9 +38,9 @@
 	<table border="0">
 		<tbody>
 			<th><img src="${mimg.url}" class="profile_photo"><br>
-				<a href="modifyform.do?user_id=${member.user_id}"><input type="submit" value="프로필 수정"></a></th>
-			<td>${member.nickname}<br>
-				${member.email} </td>
+				<a href="modifyform.do?user_id=${member._puser_id}"><input type="submit" value="프로필 수정"></a></th>
+			<td>${member_p.nickname}<br>
+				${member_p.email} </td>
 			
 		</tbody>
 	</table>
@@ -48,8 +48,8 @@
 		<tbody>
 			<h2>마지막 거래내역</h2>
 			<!-- 회색 선 긋기 -->
-			<th><img src="${pimg.image_url}" id="recent_trade"></th>
-			<td>${product.product_name}</td>
+			<th><img src="${member_p.image_url}" id="recent_trade"></th>
+			<td>${member_p.product_name}</td>
 			
 		</tbody>
 	</table>
@@ -57,7 +57,7 @@
 		<h2>최근 업로드 영상</h2>
 		<!-- 회색 선 긋기 -->
 		<th><img alt="" src="" id="recent_upload"></th>
-		<td>${product.product_name}</td>
+		<td>${member_p.product_name}</td>
 	</tbody>
 	</table>
 </body>

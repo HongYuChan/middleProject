@@ -5,11 +5,13 @@ import java.util.List;
 import middle.model.Deal;
 import middle.model.Image;
 import middle.model.Member;
+import middle.model.Member_Product;
 import middle.model.Member_img;
 import middle.model.Product;
 
 public interface Mypagemapper {
-	Member myprofile(int user_id);
+	Member_Product myprofile(int user_id);
+	Member member(int user_id);	//¸â¹ö Âü°í¿ë
 	Product myproduct(int user_id);
 	Member_img memberImg(int user_id);
 	Image productImg(int product_id);

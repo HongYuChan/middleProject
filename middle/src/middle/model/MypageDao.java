@@ -29,9 +29,24 @@ public class MypageDao {
 		return new SqlSessionFactoryBuilder().build(in);
 	}
 	
-	public Member myprofile(int user_id) {
+	public Member member(int user_id) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		Member member = new Member();
+		try {
+			member = sqlSession.getMapper(Mypagemapper.class).member(user_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+		return member;
+	}	//전부 바꾸기 싫어서 만든 멤버
+	
+	public Member_Product myprofile(int user_id) {
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		Member_Product member = new Member_Product();
 		try {
 			member = sqlSession.getMapper(Mypagemapper.class).myprofile(user_id);
 		} catch (Exception e) {
@@ -91,10 +106,13 @@ public class MypageDao {
 	}	//product_id로 상품 이미지 조회
 	
 	public int modifypassword(Member member) {
+		System.out.println(member.getPassword());
+		System.out.println(member.getUser_id());
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		int suc = -1;
 		try {
 			suc = sqlSession.getMapper(Mypagemapper.class).modifypassword(member);
+			System.out.println("패스워드 DAO 2");
 			if(suc > 0) {
 				sqlSession.commit();
 			}else {
@@ -106,6 +124,7 @@ public class MypageDao {
 			if(sqlSession!=null)
 			{sqlSession.close();}
 		}
+		System.out.println("패스워드 DAO");
 		return suc;
 	}	//패스워드 수정
 	

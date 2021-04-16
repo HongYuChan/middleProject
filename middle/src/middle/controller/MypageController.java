@@ -12,8 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 import middle.action.Action;
 import middle.action.ActionForward;
 import middle.action.DeleteMemberAction;
+import middle.action.ModifyEmailAction;
+import middle.action.ModifyNicknameAction;
 import middle.action.ModifyformAction;
-import middle.action.ModifyprofileAction;
+import middle.action.ModifypasswordAction;
 import middle.action.MyprofileAction;
 import middle.action.TradeHistoryAction;
 
@@ -55,9 +57,27 @@ public class MypageController extends HttpServlet {
 				e.printStackTrace();
 			}
     	}
-    	else if(command.equals("modifyprofile.do")) {
+    	else if(command.equals("modifypassword.do")) {
     		System.out.println("컨트롤러");
-    		action = new ModifyprofileAction();
+    		action = new ModifypasswordAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}
+    	else if(command.equals("modifynickname.do")) {
+    		System.out.println("컨트롤러");
+    		action = new ModifyNicknameAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}
+    	else if(command.equals("modifyemail.do")) {
+    		System.out.println("컨트롤러");
+    		action = new ModifyEmailAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {

@@ -5,6 +5,7 @@ import java.util.List;
 import middle.model.Deal;
 import middle.model.Image;
 import middle.model.Member;
+import middle.model.Member_Product;
 import middle.model.Member_img;
 import middle.model.MypageDao;
 
@@ -18,7 +19,11 @@ public class MypageService {
 		return service;
 	}
 	
-	public Member myprofileService(int user_id) {
+	public Member memberService(int user_id) {
+		return dao.member(user_id);
+	}
+	
+	public Member_Product myprofileService(int user_id) {
 		return dao.myprofile(user_id);
 	}
 	
@@ -31,6 +36,7 @@ public class MypageService {
 	}
 	
 	public int modifyPassService(Member member) {
+		System.out.println("패스워드 서비스");
 		return dao.modifypassword(member);
 	}
 	
