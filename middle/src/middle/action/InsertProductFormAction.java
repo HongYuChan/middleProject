@@ -9,7 +9,7 @@ public class InsertProductFormAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("/views/insert_productForm.jsp");
+		forward.setPath("/views/insertProductForm.jsp");
 		
 		return forward;
 	}

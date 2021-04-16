@@ -23,7 +23,9 @@
 <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 <script src="https://kit.fontawesome.com/f73ccf4d61.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../js/mainPage.js"></script>
+<script type="text/javascript" src="../js/signUp.js"></script>
+<SCRIPT src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></SCRIPT>
+
 </head>
 <body>
 	<header>
@@ -48,7 +50,7 @@
 											</a>
 										</li>
 										<li>
-											<a class="active" href="#">
+											<a class="active" href="noticeListAction.do">
 												Notice
 											</a>
 										</li>
@@ -58,13 +60,13 @@
 											</a>
 										</li>
 										<li>
-											<a class="active" href="#">
-												menu4
+											<a class="active" href="http://localhost:8088/">
+												Chatting
 											</a>
 										</li>
 										<li>
-											<a class="active" href="#">
-												menu5
+											<a class="active" href="insertProductForm.do">
+												Product
 											</a>
 										</li>
 									</ul>

@@ -45,7 +45,7 @@
 											</a>
 										</li>
 										<li>
-											<a class="active" href="#">
+											<a class="active" href="noticeListAction.do">
 												Notice
 											</a>
 										</li>
@@ -55,13 +55,13 @@
 											</a>
 										</li>
 										<li>
-											<a class="active" href="#">
-												menu4
+											<a class="active" href="http://localhost:8088/">
+												Chatting
 											</a>
 										</li>
 										<li>
-											<a class="active" href="#">
-												menu5
+											<a class="active" href="insertProductForm.do">
+												Product
 											</a>
 										</li>
 									</ul>

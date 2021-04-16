@@ -51,7 +51,7 @@
 											</a>
 										</li>
 										<li>
-											<a class="active" href="#">
+											<a class="active" href="noticeListAction.do">
 												Notice
 											</a>
 										</li>
@@ -64,12 +64,12 @@
 											<a class="active" href="http://localhost:8088/">
 												Chatting
 											</a>
-										</li>
-										<li>
-											<a class="active" href="#">
-												menu5
+										</li><li>
+											<a class="active" href="insertProductForm.do">
+												Product
 											</a>
 										</li>
+										
 									</ul>
 								</nav>
 							</div>

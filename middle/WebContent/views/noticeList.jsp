@@ -45,12 +45,12 @@
 								<nav>
 									<ul id="navigation">
 										<li>
-											<a class="active" href="#">
+											<a class="active" href="mainPage.do">
 												Home
 											</a>
 										</li>
 										<li>
-											<a class="active" href="#">
+											<a class="active" href="noticeListAction.do">
 												Notice
 											</a>
 										</li>
@@ -60,13 +60,12 @@
 											</a>
 										</li>
 										<li>
-											<a class="active" href="#">
-												menu4
+											<a class="active" href="http://localhost:8088/">
+												Chatting
 											</a>
-										</li>
-										<li>
-											<a class="active" href="#">
-												menu5
+										</li><li>
+											<a class="active" href="insertProductForm.do">
+												Product
 											</a>
 										</li>
 									</ul>
@@ -183,7 +182,8 @@
 		
 		<!-- 이후 영역 -->
 		<c:if test="${noticeListModel.endPage <noticeListModel.totalPageCount }">
-			<a href="noticeListAction.do?pageNum=${noticeListModel.endPage+1 }">  <i class="fas fa-caret-right"></i></a>
+			<a href="noticeListAction.do?pageNum=${noticeListModel.endPage+1 }">  
+			<i class="fas fa-caret-right"></i></a>
 		</c:if>
 	</div>
 

@@ -19,7 +19,7 @@ import middle.action.NoticeListAction;
 import middle.action.NoticeUpdateAction;
 import middle.action.NoticeUpdateFormAction;
 
-@WebServlet("/noticeBoard/*")
+@WebServlet("/member/notice/*")
 public class NoticeBoardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -31,8 +31,8 @@ public class NoticeBoardController extends HttpServlet {
     		System.out.println("requestURI: "+requestURI);
     	String contextPath = request.getContextPath();
     		System.out.println("contextPath: "+contextPath);
-    	String command = requestURI.substring(contextPath.length()+13);
-    		System.out.println("최종요청: " + command);
+    	String command = requestURI.substring(contextPath.length()+8);
+    		System.out.println("理쒖쥌�슂泥�: " + command);
     	
     	Action action = null;
     	ActionForward forward = null;

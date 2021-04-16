@@ -5,6 +5,7 @@ $(function() {
 	$("#endDate").datepicker({
 		minDate:0
 	});
+	
 });
 
  

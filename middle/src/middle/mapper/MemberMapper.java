@@ -1,10 +1,11 @@
 package middle.mapper;
 
-import java.util.List;
 
 import middle.model.Member;
+import middle.model.Product;
 
 public interface MemberMapper {
     int insertSignUp(Member member);
     Member loginCheck(String id);
+    int insertProduct(Product product);
 }

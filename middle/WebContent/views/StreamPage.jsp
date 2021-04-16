@@ -83,7 +83,7 @@
             <span class="title">다음 동영상</span>
             <ul>
                 <li class="item">
-                    <div class="img"><img src="https://i.ytimg.com/an_webp/Xc1Le3CSdrM/mqdefault_6s.webp?du=3000&sqp=CKnV4oMG&rs=AOn4CLBVVQdjxQtewtl1_pUp6joErcuu4g" alt=""></div>
+                    <div class="img"><img src="https://i.ytimg.com/an_webp/-3CDcU-eco8/mqdefault_6s.webp?du=3000&sqp=CKix5IMG&rs=AOn4CLCadCKV0VgpGT14iu1bj4GAVwZo-g" alt=""></div>
                     <div class="itemInfo">
                         <span class="title">[Playlist] 코딩 / 과제 할 때 집중 해서 듣기 좋은 음악 | 3 hour playlist | lofi coding hip hop - beats to study
                         </span>
@@ -93,7 +93,7 @@
                     <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
                 </li>
                 <li class="item">
-                    <div class="img"><img src="https://i.ytimg.com/an_webp/4LIt_ICJyjk/mqdefault_6s.webp?du=3000&sqp=CMPM4oMG&rs=AOn4CLA96g8q_pAbL1mU58hPraW8kzsoww" alt=""></div>
+                    <div class="img"><img src="https://i.ytimg.com/an_webp/Xc1Le3CSdrM/mqdefault_6s.webp?du=3000&sqp=CPXD5IMG&rs=AOn4CLBA347NiGd3O3KFj88wuO3NUzgbCA" alt=""></div>
                     <div class="itemInfo">
                         <span class="title">코딩 & 공부할때 듣는 음악 - 집중할때 듣기 좋은 편안한 Lo-Fi 재즈
                         </span>
@@ -103,7 +103,7 @@
                     <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
                 </li>
                 <li class="item">
-                    <div class="img"><img src="https://i.ytimg.com/an_webp/-3CDcU-eco8/mqdefault_6s.webp?du=3000&sqp=CKzB4oMG&rs=AOn4CLCog_k3KMSh1VE0ZI3VSu-TFUYPdg" alt=""></div>
+                    <div class="img"><img src="https://i.ytimg.com/an_webp/cd9bCN5z7jw/mqdefault_6s.webp?du=3000&sqp=CIDM5IMG&rs=AOn4CLD0AlQ95AoOn8AndKi1IcJ2uFUm9A" alt=""></div>
                     <div class="itemInfo">
                         <span class="title"> [Playlist] 코딩할때 듣기 좋은 노래 | 3 hour playlist | Lofi hip hop mix ~ jazzhop ~ relax beats
                         </span>
@@ -113,7 +113,7 @@
                     <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
                 </li>
                 <li class="item">
-                    <div class="img"><img src="https://i.ytimg.com/an_webp/cd9bCN5z7jw/mqdefault_6s.webp?du=3000&sqp=CKS34oMG&rs=AOn4CLBEpttyIzVtjlHXwdSBrdfK3clp3Q" alt=""></div>
+                    <div class="img"><img src="https://i.ytimg.com/an_webp/V_VkmxAjxlM/mqdefault_6s.webp?du=3000&sqp=CLTZ5IMG&rs=AOn4CLA3jv_3K_lgumDpfbOze33Vrm_Raw" alt=""></div>
                     <div class="itemInfo">
                         <span class="title"> [Playlist] 일과 공부로 지친 하루를 보낸 후 휴식을 취하기에 좋은 음악  3 hour lofi beat  lofi study chill music beats
                         </span>

@@ -9,6 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import middle.mapper.MemberMapper;
+import middle.mapper.StreamMapper;
 
 public class MemberDAO {
 private static MemberDAO memberDao = new MemberDAO();
@@ -63,6 +64,28 @@ private static MemberDAO memberDao = new MemberDAO();
 			}
 		}
 		return member;
+	}
+    
+    public int insertProduct(Product product) {
+		int re = -1;
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		
+		try {
+			re = sqlSession.getMapper(StreamMapper.class).insertProduct(product);
+			if(re > 0) {
+				sqlSession.commit();
+			}else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+		
+		return re;
 	}
     
 }

@@ -16,7 +16,7 @@ public class InsertProductAction implements Action {
 		StreamService service = StreamService.getInstance();
 		service.insertProductService(request);
 		forward.setRedirect(true);
-		forward.setPath("insertProductForm.do");
+		forward.setPath("mainPage.do");
 		return forward;
 	}
 
